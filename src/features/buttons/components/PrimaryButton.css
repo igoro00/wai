@@ -1,0 +1,7 @@
+.PrimaryButtonUnderline{
+    background-color: #002ED2;
+    height: 5px;
+    width: 0%;
+    transition: 100ms ease-out;
+    border-radius: 2.5px;
+}
