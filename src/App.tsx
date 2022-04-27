@@ -8,7 +8,7 @@ import { PlanPoint } from "./features/planCard/components/PlanPoint";
 
 const App: React.FC = () => {
   return (
-    <div style={{ display: "flex", flexDirection: "column", gap: 60 }}>
+    <div style={{ display: "flex", flexDirection: "column", gap: 60 }} id="header">
       <Header />
       <div>
         <div style={{ position: "relative" }}>
