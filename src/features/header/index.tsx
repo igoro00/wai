@@ -31,7 +31,7 @@ const Header: React.FC<Props> = ({}) => {
         alignItems: "center",
       }}
     >
-      <Logo />
+      <Logo onClick={()=>{scrollToId("header")}}/>
       <div style={{ display: "flex", flexDirection: "row", gap: 5 }}>
         <PrimaryButton onClick={()=>{scrollToId("o-nas")}}>O Nas</PrimaryButton>
         <PrimaryButton onClick={()=>{scrollToId("cennik")}}>Cennik</PrimaryButton>
