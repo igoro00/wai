@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   base: '/wai/',
-  plugins: [react(), tsconfigPaths()],
+  plugins: [react()],
   build: {
     sourcemap: true
   }
