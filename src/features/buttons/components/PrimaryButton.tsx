@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import "./PrimaryButton.css";
 interface Props {
   filled?: boolean;
+  onClick?: ()=>void;
 }
 
-const PrimaryButton: React.FC<Props> = ({ children, filled = false }) => {
+const PrimaryButton: React.FC<Props> = ({ children, onClick=()=>{}, filled = false }) => {
   const [isShown, setIsShown] = useState(false);
+  console.log(isShown)
   return (
     <div
       style={{
@@ -18,10 +20,11 @@ const PrimaryButton: React.FC<Props> = ({ children, filled = false }) => {
       }}
       onMouseEnter={() => setIsShown(true)}
       onMouseLeave={() => setIsShown(false)}
+      onClick={onClick}
     >
       <h2 style={{ margin: 0, color: filled?"#ffffff":undefined }}>{children}</h2>
       <div
-        className="headerButtonUnderline"
+        className="PrimaryButtonUnderline"
         style={{ width: isShown ? "100%" : "0%", backgroundColor:filled?"#FFFFFF":undefined }}
       />
     </div>

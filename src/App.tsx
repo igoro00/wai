@@ -1,5 +1,6 @@
 import { ReactComponent as Xd } from "./assets/1.svg";
 import Article from "./features/article";
+import { ContactContainer } from "./features/contact";
 import { Curve1_1, Curve1_2, Curve2 } from "./features/curves";
 import Header from "./features/header";
 import { PlanCard } from "./features/planCard";
@@ -28,11 +29,11 @@ const App: React.FC = () => {
             </h2>
           </div>
         </div>
-        <div style={{ position: "relative" }}>
+        <div style={{ position: "relative" }} id="o-nas">
           <div style={{ width: "100%", zIndex: 2, backgroundColor: "#2F80ED" }}>
             <Curve1_2 />
           </div>
-          <Curve2>
+          <Curve2 >
             <Article
               style={{ position: "absolute", top: "4vw", left: "12vw" }}
               title="Lorem Ipsum"
@@ -68,6 +69,7 @@ const App: React.FC = () => {
             marginTop: "3vw",
             marginBottom: "3vw",
           }}
+          id="cennik"
         >
           <PlanCard title="Basic" price={5.99}>
             <PlanPoint enabled>abc</PlanPoint>
@@ -100,6 +102,7 @@ const App: React.FC = () => {
             <PlanPoint enabled>xyz</PlanPoint>
           </PlanCard>
         </div>
+        <ContactContainer />
       </div>
     </div>
   );

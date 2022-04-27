@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { scrollToId } from "../../utils/scrollToId";
 import { PrimaryButton } from "../buttons";
 import Logo from "./components/Logo";
 import "./header.css";
@@ -14,7 +15,7 @@ const Header: React.FC<Props> = ({}) => {
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll, { passive: true });
-
+    handleScroll()
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -32,9 +33,9 @@ const Header: React.FC<Props> = ({}) => {
     >
       <Logo />
       <div style={{ display: "flex", flexDirection: "row", gap: 5 }}>
-        <PrimaryButton>O Nas</PrimaryButton>
-        <PrimaryButton>Cennik</PrimaryButton>
-        <PrimaryButton>Kontakt</PrimaryButton>
+        <PrimaryButton onClick={()=>{scrollToId("o-nas")}}>O Nas</PrimaryButton>
+        <PrimaryButton onClick={()=>{scrollToId("cennik")}}>Cennik</PrimaryButton>
+        <PrimaryButton onClick={()=>{scrollToId("kontakt")}}>Kontakt</PrimaryButton>
         <PrimaryButton filled>Zaloguj się</PrimaryButton>
       </div>
     </header>
