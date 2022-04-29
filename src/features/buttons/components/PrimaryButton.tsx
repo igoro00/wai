@@ -17,6 +17,7 @@ const PrimaryButton: React.FC<Props> = ({ children, onClick=()=>{}, filled = fal
         padding: "6px 12px",
         backgroundColor: filled?"#002ED2":undefined,
         borderRadius: "10px",
+        cursor:"pointer"
       }}
       onMouseEnter={() => setIsShown(true)}
       onMouseLeave={() => setIsShown(false)}

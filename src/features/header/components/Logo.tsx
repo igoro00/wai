@@ -6,7 +6,7 @@ interface Props {
 
 const Logo:React.FC<Props> = ({onClick=()=>{}}) => {
     return (
-        <h1 style={{margin:0}} onClick={onClick}>
+        <h1 style={{margin:0, cursor:"pointer"}} onClick={onClick}>
             LOGO
         </h1>
     )
